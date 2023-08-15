@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="n" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>LaundroMat</title>
+    <style>
+        .hero {
+            height: 90vh;
+            background-image: url('img/bg.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: transparent;
+            backdrop-filter: blur(5px); 
+        }
+        .shadow-lee {
+            box-shadow: 0 -8px 10px rgba(80, 80, 80, 0.4);
+        }
+
+        .shadow-mee {
+            box-shadow: 0 -3px 6px rgba(80, 80, 80, 0.4);
+        }
+
+        .composition {
+           position: relative;
+        }
+    
+         .composition__photo {
+             width: 55%;
+             box-shadow: 0 1.5rem 4rem rgba(0,0,0, .4);
+             position: absolute;
+             z-index: 10;
+             transition: all .2s;
+             outline-offset: 2rem;
+            }
+    
+    
+             .composition__photo--p1 {
+                 left: 0;
+                 top: -2rem;
+             }    
+
+    
+             .composition__photo--p2 {
+                 right: 0;
+                 top: 2rem;
+             }
+    
+             .composition__photo--p3 {
+                 left: 20%;
+                 top: 10rem;
+             }
+    
+             .composition__photo:hover{
+                 outline: 1.5rem solid rgb(46, 73, 225);
+                 transform: scale(1.05) translateY(.5rem);
+                 box-shadow: 0 2.5rem 4rem rgba(0,0,0, .5);  
+                 z-index: 20;
+             }
+    
+             .composition:hover .composition__photo:not(:hover) {
+             transform: scale.95();
+       }
+
+
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <nav class="navbar fixed top-0 left-0 w-full pt-4 text-white flex justify-around items-center">
+        <div class="text-5xl font-bold text-blue-500">GP</div>
+        <div class="flex items-center justify-between">
+            <a class="px-3 hover:text-blue-400" href="#about">About</a>
+            <a class="px-3 hover:text-blue-400" href="#why">Why</a>
+            <a class="px-3 hover:text-blue-400" href="#service">Services</a>
+            <a class="px-3 hover:text-blue-400" href="#testimonials">Testimonials</a>
+            <a class="px-3 hover:text-blue-400" href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <section id="home" class="hero relative">
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+        <div class="absolute inset-0 flex justify-center items-center">
+            <div class="p-8 text-white text-center">
+                <h1 class="text-6xl font-bold pb-8">Extra care for your favorite pairs!</h1>
+                <h3 class="text-2xl pb-6">Experience hassle-free laundry services with our modern, efficient, and customer-focused approach.</h3>
+                <a href="#contact"><button type="button" class="bg-blue-700 hover:bg-blue-900 text-white font-bold py-3 px-5 mt-6 rounded-lg shadow-lee">Request a Service</button></a>
+            </div>
+        </div>
+    </section>
+
+     <section id="about" class="pt-20 container mx-auto pb-32">
+        <div class="pt-20 grid lg:grid-cols-2 grid-cols-1 gap-3">
+            <div class="px-5 flex flex-col justify-center">
+                <h2 class="text-4xl tracking-wide pb-3 font-bold">About</h2>
+                <h2 class="text-4xl tracking-wide pl-8 pb-5">GP Laundromat</h2>
+                <p class="text-slate-400 px-5 pb-5 tracking-wide leading-7">Global Prominence Laundromat is a state-of-the-art self-service laundromat
+                    dedicated to providing convenient and efficient laundry solutions to
+                    our community. Our facility is equipped with top-of-the-line washing
+                    and drying machines, along with a comfortable and welcoming
+                    environment for customers to enjoy while their laundry is being taken
+                    care of.
+                    Our mission is to simplify the laundry process for busy
+                    individuals and families, offering a modern twist to an essential
+                    household chore. Global Prominence Laundromat is poised to become the go-to destination for efficient and modern laundry services in our community. 
+                    By combining cutting-edge equipment, a welcoming atmosphere, and a commitment to sustainability, we are confident in our ability to capture a significant share of the local laundromat market while establishing a strong brand presence.</p>
+            </div>
+                <div class="col-1/2 pt-16">
+                    <div class="relative">
+                        <img src="img/clothes.jpg" alt="photo 2" class="w-55 shadow-lg absolute z-10 transition-all duration-200 outline-offset-8 composition__photo composition__photo--p2">
+                        <img src="img/shirt.jpg" alt="photo 3" class="w-55 shadow-lg absolute z-10 transition-all duration-200 outline-offset-8 composition__photo composition__photo--p3">
+                        <img src="img/towelwash.jpg" alt="photo 1" class="w-55 shadow-lg absolute z-10 transition-all duration-200 outline-offset-8 composition__photo composition__photo--p1">
+                    </div>
+            </div>    
+        </div>
+    </section>
+
+      <section id="why" class="py-20 bg-gray-800">
+        <div class="container mx-auto">
+                <div class=" p-6 lg:mx-40 md:mx-20">
+                  <h2 class="text-4xl font-bold text-center pb-4">Why Choose Us?</h2>
+                    <p class="text-gray-300 text-center">GP Laundromat: Your trusted destination for quality laundry care, convenience, and exceptional service. Choose us today!</p>
+                </div>
+
+                <div class="grid lg:grid-cols-3 pt-12">
+                    <div class="flex flex-col items-center">
+                         <i class="fas fa-truck text-6xl pb-5 text-gray-200"></i>
+                         <h2 class="text-white pb-1">Free Pickup and Delivery</h2>
+                         <p class="text-gray-400 pb-16">We offer free pickup and delivery services.</p>
+                    </div>
+
+                    <div class="flex flex-col items-center">
+                         <i class="fas fa-tag text-6xl pb-5 text-gray-200"></i>
+                         <h2 class="text-white pb-1">Affordable</h2>
+                         <p class="text-gray-400 pb-16">Our services are pocket friendly and affordable.</p>
+                    </div>
+
+                    <div class="flex flex-col items-center">
+                         <i class="fas fa-check-circle text-6xl pb-5 text-gray-200"></i>
+                         <h2 class="text-white pb-1">Quality Service</h2>
+                         <p class="text-gray-400 pb-16">Experience our unparalleled laundry service.</p>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+    <section id="service" class="pt-20 container mx-auto pb-32">
+        <div class="pt-20 grid lg:grid-cols-2 grid-cols-1 gap-3">
+            <div class="px-5 flex flex-col">
+                <h2 class="text-5xl tracking-wide pb-3 font-bold">Our Laundry</h2>
+                <h2 class="text-5xl tracking-wide font-bold pb-8">Service</h2>
+                <p class="text-slate-400 px-5 pb-5 tracking-wide leading-7">Global Prominence Laundromat is a state-of-the-art self-service laundromat
+                    dedicated to providing convenient and efficient laundry solutions to
+                    our community. Our facility is equipped with top-of-the-line washing
+                    and drying machines, along with a comfortable and welcoming
+                    environment for customers to enjoy while their laundry is being taken
+                    care of.</p>
+                    <a href="#contact"><button type="button" class="bg-blue-700 hover:bg-blue-900 text-white font-bold py-3 px-5 mt-6 rounded-lg shadow-lee">Request a Service</button></a>
+            </div>
+
+
+            <div class="grid lg:grid-cols-3 lg:grid-rows-2 grid-cols-1 grid-rows-1 lg:gap-1">
+                <div class="shadow-mee p-4">
+                    <p class="text-gray-400 pb-4">01</p>
+                    <h3 class="text-xl text-gray-200 pb-4">General Cleaning</h3>
+                    <p class="text-gray-400">We are also accessible for general cleaning services for newly built homes, businesses, refurbished apartments, and other services.</p>
+                </div>
+
+                <div class="shadow-mee p-4">
+                    <p class="text-gray-400 pb-4">02</p>
+                    <h3 class="text-xl text-gray-200 pb-4">Wet Cleaning</h3>
+                    <p class="text-gray-400">We use eco-friendly detergents and water  as appropriate for your fabric to ensure better color retention and makes your fabrics softer.</p>
+                </div>
+
+                <div class="shadow-mee p-4">
+                    <p class="text-gray-400 pb-4">03</p>
+                    <h3 class="text-xl text-gray-200 pb-4">Ironing</h3>
+                    <p class="text-gray-400">We give your fabric the appropriate ironing treat as maybe appropriate and specified for the fabric for better treatment of your clothes.</p>
+                </div>
+
+                <div class="shadow-mee p-4">
+                    <p class="text-gray-400 pb-4">04</p>
+                    <h3 class="text-xl text-gray-200 pb-4">Mending</h3>
+                    <p class="text-gray-400">This is a service that we render at no cost, in which ever case it may occur, from fixing of loosed buttons, spoilt zip and loosen hems.</p>
+                </div>
+
+                <div class="shadow-mee p-4">
+                    <p class="text-gray-400 pb-4">05</p>
+                    <h3 class="text-xl text-gray-200 pb-4">Starching</h3>
+                    <p class="text-gray-400">We wash give your various fabric a decent and proper wash with a bit of starching for crisp feel to enhance your looks.</p>
+                </div>
+
+                <div class="shadow-mee p-4">
+                    <p class="text-gray-400 pb-4">06</p>
+                    <h3 class="text-xl text-gray-200 pb-4">Self-Service</h3>
+                    <p class="text-gray-400">We provide a section where you can book the machine for use there you can do your laundry, you can self service at a cost, depending on the weight of your fabric.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-gray-800" id="testimonials">
+      <div class="grid lg:grid-cols-2 grid-cols-1 items-center p-24">
+          <div class="p-24">
+              <span class="text-4xl pb-4 font-bold ">Testimonials</span>
+              <h2 class="text-2xl mt-4">Once you try it, you can't go back</h2>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                  <div class="flex flex-col">
+                      <img class="w-16 h-16 pb-2 rounded-full" alt="Photo of customer Rampop" src="img/rampop.jpg">
+                      <blockquote class="text-lg font-light text-gray-300">
+                        GP laundromat has a great atmosphere and a real sense of community. 
+                        Plus, the machines handle even my largest bedding items with ease.
+                      </blockquote>
+                  </div>
+                  <div class="flex flex-col">
+                      <img class="w-16 h-16 pb-2 rounded-full " alt="Photo of customer Nimat" src="img/nimat.jpg">
+                      <blockquote class="text-lg font-light text-gray-300">
+                        I can't thank GP laundromat enough for their excellent service. 
+                        When my washing machine broke down unexpectedly, they saved the day. 
+                      </blockquote>
+                  </div>
+                  <div class="flex flex-col">
+                      <img class="w-16 h-16 pb-2 rounded-full" alt="Photo of customer chi" src="img/chi.jpg">
+                      <blockquote class="text-lg font-light text-gray-300">
+                        Their attendants were incredibly helpful in guiding me through the process, and I was able to get my laundry done in no time.
+                      </blockquote>
+                  </div>
+                  <div class="flex flex-col">
+                      <img class="w-16 h-16 pb-2  rounded-full" alt="Photo of customer Ajoke" src="img/adekok.jpg">
+                      <blockquote class="text-lg font-light text-gray-300">
+                        I've been a loyal customer of Global Prominence laundromat for years, and I wouldn't trust my clothes with anyone else. 
+                      </blockquote>
+                  </div>
+              </div>
+          </div>
+  
+          <div class="grid grid-cols-3 gap-4 p-4">
+              <div class="overflow-hidden">
+                  <img src="img/iron.jpg" alt="clothes" class="w-full transition-transform duration-300 transform hover:scale-110">
+              </div>
+              <div class="overflow-hidden">
+                  <img src="img/wash5.jpg" alt="Photo of beautifully arranged clothes" class="w-full transition-transform duration-300 transform hover:scale-110">
+              </div>
+              <div class="overflow-hidden">
+                  <img src="img/wash.jpg" alt="Photo of beautifully arranged clothes" class="w-full transition-transform duration-300 transform hover:scale-110">
+              </div>
+              <div class="overflow-hidden">
+                <img src="img/folm.jpg" alt="Photo of beautifully arranged clothes" class="w-full transition-transform duration-300 transform hover:scale-110">
+              </div>
+              <div class="overflow-hidden">
+                <img src="img/emma.jpg" alt="Photo of beautifully arranged clothes" class="w-full transition-transform duration-300 transform hover:scale-110">
+              </div>
+              <div class="overflow-hidden">
+                  <img src="img/ema.jpg" alt="Photo of beautifully arranged clothes" class="w-full transition-transform duration-300 transform hover:scale-110">
+              </div>
+                <div class="overflow-hidden">
+                    <img src="img/fold.jpg" alt="Photo of beautifully arranged clothes" class="w-full transition-transform duration-300 transform hover:scale-110">
+                </div>
+              <div class="overflow-hidden">
+                  <img src="img/emm.jpg" alt="Photo of beautifully arranged clothes" class="w-full transition-transform duration-300 transform hover:scale-110">
+              </div>
+              <div class="overflow-hidden">
+                  <img src="img/basket.jpg" alt="Photo of beautifully arranged clothes" class="w-full transition-transform duration-300 transform hover:scale-110">
+              </div>
+              <div class="overflow-hidden">
+                  <img src="img/folt.jpg" alt="Photo of beautifully arranged clothes" class="w-full transition-transform duration-300 transform hover:scale-110">
+              </div>
+              <div class="overflow-hidden">
+                  <img src="img/cloth.jpg" alt="Photo of beautifully arranged clothes" class="w-full transition-transform duration-300 transform hover:scale-110">
+              </div>
+              <div class="overflow-hidden">
+                  <img src="img/wash6.jpg" alt="Photo of beautifully arranged clothes" class="w-full transition-transform duration-300 transform hover:scale-110">
+              </div>
+          </div>
+      </div>
+  </section>
+  
+  <section id="contact">
+    <div class="container mx-auto pt-40 pb-20">
+        <div class="container mx-auto bg-gray-800 py-14">
+            <h2 class="text-5xl tracking-wide pb-20 font-bold text-center">Request a service</h2>
+            <form class="lg:mx-60 mx-20" nelify>
+                <div class="grid lg:grid-cols-2 gap-4">
+                    <input type="text" id="name" name="name" required class="w-40% h-14 px-4 py-2 bg-gray-900 rounded-lg border border-none focus:outline-none focus:border-yellow-300" placeholder="Your Name" style="box-shadow: 0 -8px 10px rgba(80, 80, 80, 0.4);">
+                    <input type="email" id="email" name="email" required class="w-40% h-14 px-4 py-2 bg-gray-900 rounded-lg border border-none focus:outline-none focus:border-yellow-300" placeholder="Your Email" style="box-shadow: 0 -8px 10px rgba(80, 80, 80, 0.4);">
+                </div>
+                <textarea id="message" name="message" rows="4" required class="w-full  px-4 py-2 mt-4 bg-gray-900 rounded-lg border border-none focus:outline-none focus:border-pink-400" placeholder="Your Message" style="box-shadow: 0 -8px 10px rgba(80, 80, 80, 0.4);"></textarea>
+                <div class="flex justify-end">
+                    <button type="submit" class="bg-blue-700 hover:bg-blue-900 text-white font-bold py-3 px-5 mt-6 rounded-lg shadow-lee">Request a Service</button>
+                </div>
+            </form>
+        </div>
+    </div>
+  </section>
+
+   <footer class="bg-gray-900 text-center">
+    <div class="container mx-auto">
+        <div class="text-3xl font-bold text-blue-500 pb-10">GP</div>
+        <div class="flex items-center justify-center pb-10">
+            <a class="px-3 hover:text-blue-400" href="#about">About</a>
+            <a class="px-3 hover:text-blue-400" href="#why">Why</a>
+            <a class="px-3 hover:text-blue-400" href="#service">Services</a>
+            <a class="px-3 hover:text-blue-400" href="#testimonials">Testimonials</a>
+            <a class="px-3 hover:text-blue-400" href="#contact">Contact</a>
+        </div>
+        
+        <div class="flex justify-center py-2">
+            <a class="px-3 rounded-3xl shadow-lg shadow-gray-900" href="https://www.facebook.com/profile.php?id=100069020373735&mibextid=ZbWKwL"><i class="fab fa-facebook"></i></a>
+            <a class="px-3 rounded-3xl shadow-lg shadow-gray-900" href="https://www.instagram.com/globalprominencelaundromat"><i class="fab fa-instagram"></i></a>
+            <a class="px-3 rounded-3xl shadow-lg shadow-gray-900" href="https://twitter.com/Oluwasheyi_87"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+    </footer>
+
+
+    <script>
+        $(document).ready(function() {
+          $('a[href^="#"]').on('click', function(event) {
+            event.preventDefault();
+            var target = $(this.getAttribute('href'));
+            if (target.length) {
+              $('html, body').stop().animate({
+                scrollTop: target.offset().top - 100
+              }, 1000); 
+            }
+          });
+    
+          $("#contact").on("click", function() {
+            var target = $("#contact-section");
+            if (target.length) {
+              $('html, body').stop().animate({
+                scrollTop: target.offset().top - 100
+              }, 1000);
+            }
+          });
+        });
+      </script>
+</body>
+</html>
